@@ -7,7 +7,7 @@ function App() {
   return (
     <CalculatorProvider>
       <div>
-        <h1>Hola Mundo</h1>
+        <h1>Calculadora con React Hooks</h1>
         <Display />
         <ButtonPad />
       </div>

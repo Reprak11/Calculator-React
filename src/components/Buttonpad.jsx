@@ -7,7 +7,12 @@ const ButtonPad = () => {
     return(<div>
         <button onClick={() => displayValue.addDisplay('AC')}>AC</button>
         {valores.map(element => <button onClick={() => displayValue.addDisplay(element)}>{element}</button>)}
-        <button onClick={() => displayValue.addDisplay('.')}>.</button>
+        <button onClick={() => displayValue.addPoint()}>.</button>
+        <button onClick={() => displayValue.addOperator('+')} >+</button>
+        <button onClick={() => displayValue.addOperator('-')}>-</button>
+        <button onClick={() => displayValue.addOperator('*')}>x</button>
+        <button onClick={() => displayValue.addOperator('/')}>/</button>
+        <button>=</button>
     </div>)
 }
 
