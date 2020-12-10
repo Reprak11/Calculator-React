@@ -12,7 +12,7 @@ const ButtonPad = () => {
         <button onClick={() => displayValue.addOperator('-')}>-</button>
         <button onClick={() => displayValue.addOperator('*')}>x</button>
         <button onClick={() => displayValue.addOperator('/')}>/</button>
-        <button>=</button>
+        <button onClick={() => displayValue.result()}>=</button>
     </div>)
 }
 
