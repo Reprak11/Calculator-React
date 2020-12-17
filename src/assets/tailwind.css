@@ -2,14 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-    @apply py-2 px-4 rounded;
-}
-
 .btn-blue {
-    @apply bg-blue-500 text-white;
+    @apply bg-blue-500 outline-none  text-white;
 }
 
 .btn-blue:hover {
-    @apply bg-blue-700;
+    @apply bg-blue-700 outline-none ;
+}
+
+.btn-blue:focus{
+    @apply outline-none;
+}
+
+.btn-darkblue {
+    @apply bg-blue-400 outline-none  text-white;
+}
+
+.btn-darkblue:hover {
+    @apply bg-blue-600 outline-none ;
+}
+
+.btn-darkblue:focus{
+    @apply outline-none;
+}
+
+.btn-red{
+    @apply bg-red-700 outline-none  text-white;
+}
+.btn-red:hover{
+    @apply bg-red-800 outline-none  text-white;
+}
+.btn-red:focus{
+    @apply outline-none;
 }

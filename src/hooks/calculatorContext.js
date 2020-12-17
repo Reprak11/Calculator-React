@@ -49,13 +49,85 @@ export function CalculatorProvider ({children}){
     } 
 
     const result = () => {
-        setDisplayValue(eval(displayValue))
-        setDisplayNumber(eval(displayValue))
+        setDisplayValue(eval(displayValue).toFixed(8))
+        setDisplayNumber(eval(displayValue).toFixed(8))
     }
+
+    const buttons = [
+        {name: 'AC',
+        styleNames:"col-span-2 btn-red",
+        clickFunction:() => addDisplay('AC')
+        },
+        {name: '/',
+        styleNames:"btn-blue",
+        clickFunction:() => addOperator('/')
+        },
+        {name: 'x',
+        styleNames:"btn-blue",
+        clickFunction:() => addOperator('*')
+        },
+        {name: '7',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(7)
+        },
+        {name: '8',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(8)
+        },
+        {name: '9',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(9)
+        },
+        {name: '-',
+        styleNames:"btn-blue",
+        clickFunction:() => addOperator('-')
+        },
+        {name: '4',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(4)
+        },
+        {name: '5',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(5)
+        },
+        {name: '6',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(6)
+        },
+        {name: '+',
+        styleNames:"btn-blue",
+        clickFunction:() => addOperator('+')
+        },
+        {name: '1',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(1)
+        },
+        {name: '2',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(2)
+        },
+        {name: '3',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addDisplay(3)
+        },
+        {name: '=',
+        styleNames:"row-span-2 btn-red",
+        clickFunction:() => result()
+        },
+        {name: '0',
+        styleNames:"col-span-2 btn-darkblue",
+        clickFunction:() => addDisplay(0)
+        },
+        {name: '.',
+        styleNames:"btn-darkblue",
+        clickFunction:() => addPoint()
+        }
+    ]
 
     const store = {
         disValue: displayValue, 
         disNumber: displayNumber,
+        buttons: buttons,
         addDisplay,
         addPoint,
         addOperator,

@@ -3,17 +3,12 @@ import {useCalculator} from '../hooks/calculatorContext'
 
 const ButtonPad = () => {
     const displayValue = useCalculator()
-    const valores = [...Array(10).keys()]
-    return(<div>
-        <button onClick={() => displayValue.addDisplay('AC')}>AC</button>
-        {valores.map(element => <button onClick={() => displayValue.addDisplay(element)}>{element}</button>)}
-        <button onClick={() => displayValue.addPoint()}>.</button>
-        <button onClick={() => displayValue.addOperator('+')} >+</button>
-        <button onClick={() => displayValue.addOperator('-')}>-</button>
-        <button onClick={() => displayValue.addOperator('*')}>x</button>
-        <button onClick={() => displayValue.addOperator('/')}>/</button>
-        <button onClick={() => displayValue.result()}>=</button>
-    </div>)
+    
+    return(
+    <div className="h-4/5 grid grid-cols-4 gap-0.5">
+        {displayValue.buttons.map(element => <button className={`font-bold ${element.styleNames}`} onClick={element.clickFunction}>{element.name}</button>)}
+    </div>
+    )
 }
 
 export default ButtonPad
