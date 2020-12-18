@@ -49,8 +49,18 @@ export function CalculatorProvider ({children}){
     } 
 
     const result = () => {
-        setDisplayValue(eval(displayValue).toFixed(8))
-        setDisplayNumber(eval(displayValue).toFixed(8))
+        try {
+            if (eval(displayValue)%1 != 0){
+                setDisplayValue(eval(displayValue).toFixed(6))
+                setDisplayNumber(eval(displayValue).toFixed(6))
+            } else{
+                setDisplayValue(eval(displayValue))
+                setDisplayNumber(eval(displayValue))
+            }
+        } catch (e) {
+            setDisplayValue("ERROR")
+            setDisplayNumber("ERROR")
+        }
     }
 
     const buttons = [
