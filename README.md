@@ -34,7 +34,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## Built with 
 
-- React - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [React](https://es.reactjs.org/) - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
 
 
